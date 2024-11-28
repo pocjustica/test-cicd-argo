@@ -1,0 +1,11 @@
+site_name: test-cicd-argo
+site_description: 
+repo_url: https://github.com/piomin/test-cicd-argo
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - test-cicd-argo Documentation: index.md

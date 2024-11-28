@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-cicd-argo
+  title: test-cicd-argo
+  annotations:
+    janus-idp.io/tekton: test-cicd-argo
+    tektonci/build-namespace: poc-ktools
+    github.com/project-slug: piomin/test-cicd-argo
+    sonarqube.org/project-key: piomin_test-cicd-argo
+    backstage.io/kubernetes-id: test-cicd-argo
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: test-cicd-argo
+    prometheus.io/rule: container_memory_usage_bytes{pod=~"test-cicd-argo-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"test-cicd-argo-.*"}[5m])|pod
+  tags:
+    - spring-boot
+    - java
+    - maven
+    - tekton
+    - argocd
+    - renovate
+    - sonarqube
+spec:
+  type: service
+  owner: piomin
+  lifecycle: experimental
